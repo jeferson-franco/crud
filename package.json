@@ -4,7 +4,8 @@
   "description": "CRUD app",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./core/crud.js",
+    "start": "node ./core/crud.js",
+    "dev": "nodemon ./core/crud.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/jeferson-franco/crud/issues"
   },
-  "homepage": "https://github.com/jeferson-franco/crud#readme"
+  "homepage": "https://github.com/jeferson-franco/crud#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
 }
