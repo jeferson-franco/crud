@@ -1,0 +1,34 @@
+{
+  "todos": [
+    [
+      [
+        {
+          "date": "2023-06-16T23:19:18.860Z",
+          "content": "Segunda TODO",
+          "done": false
+        }
+      ],
+      {
+        "date": "2023-06-16T23:19:38.980Z",
+        "content": "Primeira TODO",
+        "done": false
+      }
+    ],
+    {
+      "date": "2023-06-16T23:19:38.985Z",
+      "content": "Segunda TODO",
+      "done": false
+    },
+    {
+      "date": "2023-06-16T23:19:45.181Z",
+      "content": "Primeira TODO",
+      "done": false
+    },
+    {
+      "date": "2023-06-16T23:19:45.186Z",
+      "content": "Segunda TODO",
+      "done": false
+    }
+  ],
+  "dogs": []
+}

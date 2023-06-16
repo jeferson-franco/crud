@@ -16,7 +16,8 @@ function create(content: string) {
         done: false
     };
 
-    const todos = [
+    const todos: Array<Todo> = [
+        ...read(),
         todo
     ];
 
@@ -39,6 +40,6 @@ function read(): Array<Todo> {
 }
 
 // [SIMULATION]
-// create("Primeira TODO");
-// create("Segunda TODO");
+create("Primeira TODO");
+create("Segunda TODO");
 console.log(read());
