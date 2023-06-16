@@ -35,6 +35,6 @@ function read(): Array<Todo> {
 }
 
 // [SIMULATION]
-create("Primeira TODO");
-create("Segunda TODO");
+// create("Primeira TODO");
+// create("Segunda TODO");
 console.log(read());
