@@ -1,1 +1,8 @@
-[{"date":"2023-06-16T23:02:45.516Z","content":"Segunda TODO"}]
+{
+  "todos": [
+    {
+      "date": "2023-06-16T23:03:49.366Z",
+      "content": "Segunda TODO"
+    }
+  ]
+}

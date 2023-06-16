@@ -14,7 +14,7 @@ function create(content: string) {
     ];
 
     // salvar o content no sistema
-    fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todos));
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({ todos }, null, 2));
     return content;
 }
 
