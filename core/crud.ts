@@ -10,4 +10,5 @@ function create(content: string) {
 }
 
 // [SIMULATION]
-console.log(create("Hello DB World"));
+create("Primeira TODO");
+console.log(read());
