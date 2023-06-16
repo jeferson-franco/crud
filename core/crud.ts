@@ -39,7 +39,12 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
+function CLEAR_DB() {
+    fs.writeFileSync(DB_FILE_PATH, "");
+}
+
 // [SIMULATION]
+CLEAR_DB();
 create("Primeira TODO");
 create("Segunda TODO");
 console.log(read());
