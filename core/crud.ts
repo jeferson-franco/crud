@@ -8,10 +8,13 @@ function create(content: string) {
         date: new Date().toISOString(),
         content: content
     };
-    console.log(todo);
+
+    const todos = [
+        todo
+    ];
 
     // salvar o content no sistema
-    fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todo));
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todos));
     return content;
 }
 
