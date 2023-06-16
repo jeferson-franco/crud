@@ -5,6 +5,7 @@ console.log("[CRUD]");
 
 function create(content: string) {
     const todo = {
+        date: new Date().toISOString(),
         content: content
     };
     console.log(todo);
