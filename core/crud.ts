@@ -28,8 +28,9 @@ function create(content: string) {
     return content;
 }
 
-function read() {
-    const db = fs.readFileSync(DB_FILE_PATH, "utf-8");
+function read(): Array<Todo> {
+    const dbString = fs.readFileSync(DB_FILE_PATH, "utf-8");
+    const db = JSON.parse(dbString);
     return db;
 }
 
