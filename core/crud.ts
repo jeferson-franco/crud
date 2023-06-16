@@ -10,7 +10,7 @@ function create(content: string) {
     console.log(todo);
 
     // salvar o content no sistema
-    fs.writeFileSync(DB_FILE_PATH, todo.toString());
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify(todo));
     return content;
 }
 
