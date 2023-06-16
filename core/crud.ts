@@ -10,7 +10,7 @@ function create(content: string) {
 }
 
 function read() {
-    const db = fs.readFileSync(DB_FILE_PATH);
+    const db = fs.readFileSync(DB_FILE_PATH, "utf-8");
     return db;
 }
 
