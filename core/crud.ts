@@ -9,6 +9,11 @@ function create(content: string) {
     return content;
 }
 
+function read() {
+    const db = fs.readFileSync(DB_FILE_PATH);
+    return db;
+}
+
 // [SIMULATION]
 create("Primeira TODO");
 console.log(read());
