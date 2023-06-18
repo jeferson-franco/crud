@@ -73,6 +73,6 @@ create("Primeira TODO");
 create("Primeira TODO");
 const terceiraTodo = create("Segunda TODO");
 update(terceiraTodo.id, {
-    content: "Segunda TODO com novo content!"
+    content: "Atualizada!"
 });
 console.log(read());
