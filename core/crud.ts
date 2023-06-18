@@ -42,6 +42,10 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
+function update() {
+
+}
+
 function CLEAR_DB() {
     fs.writeFileSync(DB_FILE_PATH, "");
 }
@@ -51,4 +55,5 @@ CLEAR_DB();
 create("Primeira TODO");
 create("Primeira TODO");
 create("Segunda TODO");
+update(DEQUEM, OQUE);
 console.log(read());
