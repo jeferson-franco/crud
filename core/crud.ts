@@ -13,7 +13,7 @@ interface Todo {
 
 function create(content: string) {
     const todo: Todo = {
-        id: Date.now().toString(),
+        id: uuid(),
         date: new Date().toISOString(),
         content: content,
         done: false
