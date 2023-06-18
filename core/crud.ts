@@ -42,8 +42,8 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
-function update(id: string) {
-
+function update(id: string, todo: Partial<Todo>) {
+    console.log(todo);
 }
 
 function CLEAR_DB() {
@@ -55,5 +55,7 @@ CLEAR_DB();
 create("Primeira TODO");
 create("Primeira TODO");
 const terceiraTodo = create("Segunda TODO");
-update(terceiraTodo.id, OQUE);
+update(terceiraTodo.id, {
+    content: "Segunda TODO com novo content!"
+});
 console.log(read());
