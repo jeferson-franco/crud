@@ -11,7 +11,7 @@ interface Todo {
     done: boolean;
 }
 
-function create(content: string) {
+function create(content: string): Todo {
     const todo: Todo = {
         id: uuid(),
         date: new Date().toISOString(),
@@ -29,7 +29,7 @@ function create(content: string) {
         todos,
         dogs: []
     }, null, 2));
-    return content;
+    return todo;
 }
 
 function read(): Array<Todo> {
@@ -42,7 +42,7 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
-function update() {
+function update(id: string) {
 
 }
 
@@ -54,6 +54,6 @@ function CLEAR_DB() {
 CLEAR_DB();
 create("Primeira TODO");
 create("Primeira TODO");
-create("Segunda TODO");
-update(DEQUEM, OQUE);
+const terceiraTodo = create("Segunda TODO");
+update(terceiraTodo.id, OQUE);
 console.log(read());
