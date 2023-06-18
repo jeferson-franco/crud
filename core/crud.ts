@@ -12,7 +12,7 @@ interface Todo {
 
 function create(content: string) {
     const todo: Todo = {
-        id: "1",
+        id: Date.now().toString(),
         date: new Date().toISOString(),
         content: content,
         done: false
