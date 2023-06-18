@@ -44,6 +44,10 @@ function read(): Array<Todo> {
 
 function update(id: string, todo: Partial<Todo>) {
     console.log(todo);
+    const todos = read();
+    todos.forEach((currentTodo) => {
+        console.log(currentTodo);
+    });
 }
 
 function CLEAR_DB() {
