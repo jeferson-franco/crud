@@ -46,5 +46,6 @@ function CLEAR_DB() {
 // [SIMULATION]
 CLEAR_DB();
 create("Primeira TODO");
+create("Primeira TODO");
 create("Segunda TODO");
 console.log(read());
