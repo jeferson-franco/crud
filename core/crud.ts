@@ -63,6 +63,12 @@ function update(id: string, partialTodo: Partial<Todo>): Todo {
     return updatedTodo;
 }
 
+function updateContentById(id: string, content: string): Todo {
+    return update(id, {
+        content
+    });
+}
+
 function CLEAR_DB() {
     fs.writeFileSync(DB_FILE_PATH, "");
 }
@@ -72,8 +78,9 @@ CLEAR_DB();
 create("Primeira TODO");
 create("Primeira TODO");
 const terceiraTodo = create("Segunda TODO");
-update(terceiraTodo.id, {
-    content: "Atualizada!",
-    done: true
-});
+// update(terceiraTodo.id, {
+//     content: "Atualizada!",
+//     done: true
+// });
+updateContentById(terceiraTodo.id, "Atualizada!");
 console.log(read());
