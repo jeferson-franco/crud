@@ -4,6 +4,7 @@ const DB_FILE_PATH = "./core/db";
 console.log("[CRUD]");
 
 interface Todo {
+    id: string;
     date: string;
     content: string;
     done: boolean;
@@ -11,6 +12,7 @@ interface Todo {
 
 function create(content: string) {
     const todo: Todo = {
+        id: "1",
         date: new Date().toISOString(),
         content: content,
         done: false
