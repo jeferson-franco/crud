@@ -42,18 +42,25 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
-function update(id: string, partialTodo: Partial<Todo>) {
+function update(id: string, partialTodo: Partial<Todo>): Todo {
+    let updatedTodo;
     const todos = read();
     todos.forEach((currentTodo) => {
         const isToUpdate = currentTodo.id === id;
         if (isToUpdate) {
-            Object.assign(currentTodo, partialTodo);
+            updatedTodo = Object.assign(currentTodo, partialTodo);
         }
     });
 
     fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
         todos,
     }, null, 2));
+
+    if (!updatedTodo) {
+        throw new Error("Please, provide another ID!");
+    }
+
+    return updatedTodo;
 }
 
 function CLEAR_DB() {
