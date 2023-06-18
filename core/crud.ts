@@ -42,12 +42,15 @@ function read(): Array<Todo> {
     return db.todos;
 }
 
-function update(id: string, todo: Partial<Todo>) {
-    console.log(todo);
+function update(id: string, partialTodo: Partial<Todo>) {
     const todos = read();
     todos.forEach((currentTodo) => {
-        console.log(currentTodo);
+        const isToUpdate = currentTodo.id === id;
+        if (isToUpdate) {
+            Object.assign(currentTodo, partialTodo);
+        }
     });
+    console.log("TODOS ATUALIZADAS", todos);
 }
 
 function CLEAR_DB() {
