@@ -69,6 +69,10 @@ function updateContentById(id: string, content: string): Todo {
     });
 }
 
+function deleteById(id: string) {
+    const todos = read();
+}
+
 function CLEAR_DB() {
     fs.writeFileSync(DB_FILE_PATH, "");
 }
