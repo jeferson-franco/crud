@@ -71,6 +71,15 @@ function updateContentById(id: string, content: string): Todo {
 
 function deleteById(id: string) {
     const todos = read();
+
+    const todosWithoutOne = todos.filter((todo) => {
+        if (id === todo.id) {
+            return false;
+        }
+        return true;
+    });
+
+    console.log("todosWithoutOne", todosWithoutOne);
 }
 
 function CLEAR_DB() {
@@ -80,9 +89,9 @@ function CLEAR_DB() {
 // [SIMULATION]
 CLEAR_DB();
 create("Primeira TODO");
-const secondTodo = create("Primeira TODO");
+const secondTodo = create("Segunda TODO");
 deleteById(secondTodo.id);
-const thirdTodo = create("Segunda TODO");
+const thirdTodo = create("Terceira TODO");
 // update(thirdTodo.id, {
 //     content: "Atualizada!",
 //     done: true
