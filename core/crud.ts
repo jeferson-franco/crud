@@ -79,7 +79,9 @@ function deleteById(id: string) {
         return true;
     });
 
-    console.log("todosWithoutOne", todosWithoutOne);
+    fs.writeFileSync(DB_FILE_PATH, JSON.stringify({
+        todos: todosWithoutOne,
+    }, null, 2));
 }
 
 function CLEAR_DB() {
